@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url("images.jfif") no-repeat center/cover;
+    color: #fff;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: -1;
+}
+
+.page {
+    display: none;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.page.active {
+    display: flex;
+}
+
+.card, .details {
+    background: rgba(17,24,39,0.95);
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    background: #22c55e;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #16a34a;
+}
+
+/* MOVIES */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.movie {
+    height: 120px;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* SEATS */
+.seats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.seat {
+    padding: 12px;
+    background: #334155;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.seat.selected {
+    background: #22c55e;
+}
+
+/* PAYMENT */
+.payment label {
+    display: block;
+    margin: 10px 0;
+    text-align: left;
+}

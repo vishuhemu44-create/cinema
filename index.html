@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Movie Booking System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+    <div class="card">
+        <h2>🎬 Movie Recommendation</h2>
+
+        <label>Select Language</label>
+        <select id="language">
+            <option>English</option>
+            <option>Hindi</option>
+            <option>Tamil</option>
+            <option>Telugu</option>
+        </select>
+
+        <button onclick="showMovies()">Get Movies</button>
+        <div id="result"></div>
+    </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+    <div class="details">
+        <h1 id="movieTitle"></h1>
+        <p>Enjoy your favorite movie with a great cinema experience.</p>
+        <button onclick="goToSeats()">Select Seats</button>
+    </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+    <div class="details">
+        <h2>🎟 Select Your Seats</h2>
+
+        <div class="seats" id="seats"></div>
+
+        <p>Selected Seats: <span id="selectedSeats">None</span></p>
+
+        <button onclick="goToPayment()">Proceed to Payment</button>
+    </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="page4">
+    <div class="details">
+        <h2>💳 Payment Method</h2>
+
+        <div class="payment">
+            <label><input type="radio" name="pay"> Google Pay</label>
+            <label><input type="radio" name="pay"> PhonePe</label>
+            <label><input type="radio" name="pay"> Net Banking</label>
+            <label><input type="radio" name="pay"> Credit Card</label>
+        </div>
+
+        <button onclick="confirmBooking()">Confirm Booking</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
